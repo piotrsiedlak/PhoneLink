@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace PhoneLink.Database.Models
 {
-    internal class ContactGroups
+    public class ContactGroups
     {
+        public int GroupId { get; set; }
+        public int ContactId { get; set; }
+        public Groups Group { get; set; }
+        public Contacts Contact { get; set; }
     }
 }
