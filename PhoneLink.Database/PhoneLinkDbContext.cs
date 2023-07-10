@@ -30,10 +30,10 @@ namespace PhoneLink.Database
                 .WithMany(u => u.UserContacts)
                 .HasForeignKey(c => c.UserId);
 
-            modelBuilder.Entity<Contacts>()
+           /* modelBuilder.Entity<Contacts>()
                 .HasMany(c => c.Favorites)
                 .WithOne(f => f.Contact)
-                .HasForeignKey(f => f.ContactId);
+                .HasForeignKey(f => f.ContactId); */
 
             modelBuilder.Entity<ContactGroups>()
                 .HasKey(cg => new { cg.GroupId, cg.ContactId });
@@ -43,15 +43,15 @@ namespace PhoneLink.Database
                 .WithMany(g => g.ContactGroups)
                 .HasForeignKey(cg => cg.GroupId);
 
-            modelBuilder.Entity<ContactGroups>()
+            /*modelBuilder.Entity<ContactGroups>()
                 .HasOne(cg => cg.Contact)
                 .WithMany(c => c.ContactGroups)
-                .HasForeignKey(cg => cg.ContactId);
+                .HasForeignKey(cg => cg.ContactId);*/
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=C:\\Users\\Oskar\\Desktop\\Nowy folder (2)\\PhoneLink.Database\\PhoneLink.db");
+            optionsBuilder.UseSqlite("Data Source=PhoneLink.db");
         }
     }
 }

@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\image.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PhoneLink.Database\PhoneLink.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\image.png" />
   </ItemGroup>
 
 </Project>

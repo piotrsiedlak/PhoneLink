@@ -18,8 +18,8 @@ namespace PhoneLink.Database.Models
         public int phoneNumber { get; set; }
         public string address { get; set; }
         public DateTime dateOfBirth { get; set; }
-        public IEnumerable<Favorite> Favorites { get; set; }
+        public bool Favorites { get; set; }
         public Users User { get; set; }
-        public IEnumerable<ContactGroups> ContactGroups { get; set; }
+        public string ContactGroups { get; set; }
     }
 }

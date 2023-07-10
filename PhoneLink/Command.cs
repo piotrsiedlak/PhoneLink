@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace PhoneLink
 {
-    class Command : ICommand
+    public class Command : ICommand
     {
 
         private readonly Action _execute;

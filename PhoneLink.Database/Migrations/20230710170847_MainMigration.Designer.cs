@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PhoneLink.Database;
 
@@ -10,9 +11,11 @@ using PhoneLink.Database;
 namespace PhoneLink.Database.Migrations
 {
     [DbContext(typeof(PhoneLinkDbContext))]
-    partial class PhoneLinkDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230710170847_MainMigration")]
+    partial class MainMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0-preview.5.23280.1");

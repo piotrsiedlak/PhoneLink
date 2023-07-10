@@ -1,0 +1,104 @@
+﻿<Window x:Class="PhoneLink.view.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneLink.view"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="800">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFB4D4FF" Offset="0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Grid.RowSpan="2" >
+
+                    <Grid HorizontalAlignment="Center" Height="600" Width="250" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="29*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Bottom">
+                    <StackPanel>
+                        <TextBlock Grid.Row="3" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="First Name"></TextBlock>
+                        <TextBox  Grid.Row="4" Text="{Binding firstName}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                    </StackPanel>
+                        <StackPanel>
+                            <TextBlock Grid.Row="3" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Last Name"></TextBlock>
+                            <TextBox  Grid.Row="4" Text="{Binding lastName}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Grid.Row="3" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Email"></TextBlock>
+                            <TextBox  Grid.Row="4" Text="{Binding Email}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Grid.Row="3" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Phone Number"></TextBlock>
+                            <TextBox  Grid.Row="4" Text="{Binding Phone}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Grid.Row="3" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Address"></TextBlock>
+                            <TextBox  Grid.Row="4" Text="{Binding Address}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Date of Birth"></TextBlock>
+                            <TextBox Text="{Binding DateOfBirth}" Margin="10" Height="40" Width="220"  Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"/>
+                        </StackPanel>
+
+                    </StackPanel>
+<StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+    <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsFavorite}" />
+    <TextBlock Margin="0 0 150 20" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Favorites"></TextBlock>
+    <StackPanel>
+        <TextBlock Margin="0 -50 150 20" Foreground="White" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Group"></TextBlock>
+        <ComboBox SelectedItem="{Binding ContactGroups}" Width="200" Height="50"  FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Margin="-80 -10 40 0" BorderBrush="White">
+            <ComboBoxItem Content ="Normal" />
+            <ComboBoxItem Content ="Family"/>
+            <ComboBoxItem Content ="Work"/>
+        </ComboBox>
+    </StackPanel>
+    <Button Command="{Binding Add}" Margin="0 0 0 0" Height="40" Width="220" Content="ADD" Background="White" Foreground="#FF3355E0" FontSize="25" FontWeight="Bold"></Button>
+
+</StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PhoneLink.viewModel
 {
-    class BasicViewModel : INotifyPropertyChanged
+    public class BasicViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

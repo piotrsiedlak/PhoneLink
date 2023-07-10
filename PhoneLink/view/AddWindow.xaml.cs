@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneLink.viewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PhoneLink.Database;
 
 namespace PhoneLink.view
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
+    /// Interaction logic for AddWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AddWindow : Window
     {
-        public Window1()
+        public AddWindow()
         {
             InitializeComponent();
+            DataContext = new AddWindowViewModel(new PhoneLinkDbContext());
         }
     }
 }

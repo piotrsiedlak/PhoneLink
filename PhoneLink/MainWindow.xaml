@@ -47,7 +47,7 @@
                          VerticalAlignment="Center"
                          FontSize="15" FontWeight="Bold" Foreground="Blue"  BorderThickness="0,0,0,0"/>
                 </Border>
-                <Button Grid.Row="3" x:Name="Button" Height="20" Width="100"
+                <Button Grid.Row="3" x:Name="Button" Height="40" Width="130"
         Command="{Binding Login}"
         Content="Login"
         BorderBrush="Blue" BorderThickness="1"

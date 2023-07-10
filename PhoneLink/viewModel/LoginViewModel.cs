@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using PhoneLink.Database;
+using PhoneLink.view;
 using SQLitePCL;
 
 namespace PhoneLink.viewModel
@@ -37,11 +38,16 @@ namespace PhoneLink.viewModel
 
             if (user.password == Password)
             {
-                MessageBox.Show("Logged in");
+                var window = new PhoneBookWindow();
+                if (Application.Current.MainWindow != null)
+                {
+                    Application.Current.MainWindow.Close();
+                }
+                Application.Current.MainWindow = window;
+                window.Show();
             }
             else
             {
-                MessageBox.Show("Invalid password");
             }
 
         }
