@@ -35,8 +35,9 @@
 
 
         <!-- Link do GitHuba -->
-        <TextBlock Text="https://github.com/Oskaroo" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,5,180"
-                   MouseLeftButtonDown="OpenGitHubLink">
+        <!-- Link do GitHuba -->
+        <TextBlock Text="GitHub: " HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,5,10"/>
+        <TextBlock Text="https://github.com/Oskaroo" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,5,180">
             <TextBlock.Style>
                 <Style TargetType="TextBlock">
                     <Setter Property="Foreground" Value="Blue"/>
